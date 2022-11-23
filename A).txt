@@ -1,0 +1,1 @@
+  O parâmetro beta expressa a taxa com que pessoas se infectam com a doença a cada intervalo de tempo passado e o parâmetro gama expressa a taxa com que pessoas se recuperam a cada mesmo intervalo percorrido. 

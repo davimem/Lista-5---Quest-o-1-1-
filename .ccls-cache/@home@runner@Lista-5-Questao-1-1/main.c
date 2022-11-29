@@ -41,10 +41,15 @@ double* LeVetor(char *nome,int *m)
   return v;
 }
 
-void RungeKutta2Ord(double x, double y[N], double h, double xi, double xf)
+void RungeKutta2Ord(double x, double *y, double h, double xi, double xf)
 {
   int i;
-  double k1[N], k2[N], k3[N], k4[N], yp[N], ypp[N];
+  double *k1=calloc(N, sizeof(double));
+  double *k2=calloc(N, sizeof(double));
+  double *k3=calloc(N, sizeof(double));
+  double *k4=calloc(N, sizeof(double));
+  double *yp=calloc(N, sizeof(double));
+  double *ypp=calloc(N, sizeof(double));
   equacoes f[N]={S,I,R};
 
   for(x=xi; x<xf; x+=h)
@@ -92,6 +97,4 @@ int main(int argc, char *argv[])
   h=0.1;
   
   RungeKutta2Ord(x, y, h, xi, xf);
-    
-  
 }
